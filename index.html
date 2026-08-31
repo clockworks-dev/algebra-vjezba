@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Yellow Pokemons</title>
-  </head>
-  <body>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Yellow Pokemons</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <table class="pokemon_list">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>name</td>
+      </tr>
+    </thead>
+    <tbody id="pokemon-list"></tbody>
+  </table>
+
+  <script id="pokemon-template" type="text/x-handlebars-template">
+    {{#each yellowPokemons}}
+    <tr>
+      <td>{{orderNumber @index}}.</td>
+      <td><a href="{{this.url}}" target="_blank">{{this.name}}</a></td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
