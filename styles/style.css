@@ -10,6 +10,7 @@
 
 body {
     margin: 0;
+    min-width: 320px;
 }
 
 .container {
@@ -32,38 +33,42 @@ p,
 }
 
 .pokemon-table {
-    width: 100%;
     margin-top: 1.25rem;
-    border-collapse: collapse;
-    background: #ffffff;
     box-shadow: 0 3px 12px rgb(0 0 0 / 10%);
-}
-
-.pokemon-table th,
-.pokemon-table td {
-    padding: 0.8rem 1rem;
-    text-align: left;
-    border-bottom: 1px solid #fde68a;
 }
 
 .pokemon-table th {
     color: #713f12;
-    background: #facc15;
 }
 
-.pokemon-table tbody tr:nth-child(even) {
-    background: #fffbeb;
-}
-
-.pokemon-table tbody tr:hover {
-    background: #fef3c7;
-}
-
-.pokemon-table a {
+.pokemon-table a,
+.pokemon-name {
     color: #1d4ed8;
     font-weight: 600;
 }
 
-.pokemon-table a:hover {
+.pokemon-name {
+    cursor: pointer;
+    width: fit-content;
+}
+
+.pokemon-table a:hover,
+.pokemon-name:hover {
     color: #1e40af;
+}
+
+.popover {
+    position: relative;
+}
+
+.popover-close {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.45rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.25rem;
+    line-height: 1;
 }
