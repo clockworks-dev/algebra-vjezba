@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Razvojna okolina</title>
-</head>
-
-<body>
-    <h1>Rad sa Git-om</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste autem molestiae praesentium consectetur illo quod
-        nisi, sapiente quia quae nulla culpa repellendus porro blanditiis illum modi voluptatem asperiores magnam
-        repellat.</p>
-    <h2>naslov 2</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore praesentium excepturi asperiores sapiente
-        accusamus atque dolorum provident beatae, doloremque cum vitae? Quo veritatis, magnam quam qui eum repellat
-        harum ipsam!
-        Sequi obcaecati consequatur et facere odio cumque voluptas saepe, vitae culpa. Eligendi id fugit soluta,
-        similique a sapiente, nihil perspiciatis eveniet cupiditate ea ab, aliquid dolore magnam explicabo rerum ipsum!
-    </p>
-    <h3>GitHub izmjena</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque explicabo quos quis animi eius? Facilis
-        veritatis, laboriosam ipsum neque natus vitae et qui ea mollitia reiciendis beatae error accusamus deleniti!</p>
-    <p>Volim GitHub! <3 </p>
-
-            <button>Moj Git Gumb</button>
-</body>
-
+    <title>Yellow Pokemons</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.min.js"></script>
+  </head>
+  <body>
+	<script id="pokemon-list" type="text/x-handlebars-template">
+		<table>
+			<tr>
+				<th>#</th>
+				<th>Ime</th>
+			</tr>
+			{{#each pokemon}}
+		  		<tr>
+					<td>{{@index}}</td>
+					<td><a href="{{this.url}}">{{this.name}}</a></td>
+				</tr>
+			{{/each}}
+		</table>
+	</script>
+	<div id="result"></div>
+	<script src="script.js"></script>
+  </body>
 </html>
