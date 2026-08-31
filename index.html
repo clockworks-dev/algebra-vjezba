@@ -1,9 +1,36 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Yellow Pokemons</title>
-  </head>
-  <body>
-  </body>
+<!doctype html>
+<html lang="hr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Žute Pokemon vrste</title>
+        <link rel="stylesheet" href="styles/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.8/dist/handlebars.min.js"></script>
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <main class="container">
+            <h1>Žute Pokemon vrste</h1>
+            <p id="status" role="status">Učitavanje podataka...</p>
+
+            <table class="pokemon-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Redni broj</th>
+                        <th scope="col">Pokemon vrsta</th>
+                    </tr>
+                </thead>
+                <tbody id="pokemon-results"></tbody>
+            </table>
+        </main>
+
+        <script id="pokemon-template" type="text/x-handlebars-template">
+            {{#each pokemon}}
+                <tr>
+                    <td>{{number}}</td>
+                    <td><a href="{{url}}" target="_blank" rel="noopener noreferrer">{{name}}</a></td>
+                </tr>
+            {{/each}}
+        </script>
+    </body>
 </html>
