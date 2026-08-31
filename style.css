@@ -1,0 +1,18 @@
+.pokemon_list {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #333;
+  min-width: 100px;
+  text-align: center;
+}
+
+thead {
+  background-color: #555;
+  color: white;
+}
+
+tr:nth-child(2n) {
+  background-color: #ccc;
+}
